@@ -20,35 +20,22 @@
 
 /****************** HEADER ******************/
 
-.header {
+.Navigator {
   background-color: var(--color-white);
   width: 100%;
   padding: 20px 150px 20px 150px;
   box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.25);
 }
 
-.header_wrap {
+.Navigator_wrap {
+  width: 100%;
+  height: 100%;
   display: flex;
-  justify-content: space-between;
-}
-
-.header_block {
-  width: 80%;
-}
-
-.header_nav {
-  width: 20%;
-}
-
-.header_nav nav {
-  display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 @media only screen and (max-width: 768px) {
-  .header {
-    display: none;
-  }
+ 
 }
 
 /****************** FOOTER ******************/
