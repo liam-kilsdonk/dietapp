@@ -26,6 +26,13 @@ const FoodSearch = ({ onSearch }) => {
       console.error('Error:', error.message);
     }
   };
+  
+  const handleKeyPress = (event) => {
+    // If the pressed key is Enter (key code 13), initiate the search
+    if (event.key === 'Enter') {
+      handleSearch();
+    }
+  };
 
   return (
     <div>
@@ -33,9 +40,9 @@ const FoodSearch = ({ onSearch }) => {
         type="text"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
+        onKeyPress={handleKeyPress}
         placeholder="Search for food..."
       />
-      <button onClick={handleSearch}>Search</button>
     </div>
   );
 };
