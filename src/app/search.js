@@ -15,9 +15,13 @@ const FoodSearch = ({ onSearch }) => {
       }
 
       const data = await response.json();
+      console.log(data.foods);
 
-      // Pass the search results to the onSearch callback
-      onSearch(data.foods);
+      // Filter out food items with dataType "Branded"
+      const filteredResults = data.foods.filter((food) => food.dataType !== 'Branded');
+
+      // Pass the filtered search results to the onSearch callback
+      onSearch(filteredResults);
     } catch (error) {
       console.error('Error:', error.message);
     }
