@@ -15,6 +15,7 @@ const FoodSearch = ({ onSearch }) => {
       }
 
       const data = await response.json();
+      console.log(data.foods);
 
       // Pass the search results to the onSearch callback
       onSearch(data.foods);
